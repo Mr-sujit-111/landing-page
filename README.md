@@ -25,7 +25,7 @@ StreamLine is a modern, responsive landing page for a SaaS (Software as a Servic
 
 ## Technologies Used
 
-- [Next.js 13](https://nextjs.org/) - React framework for building the application
+- [Next.js 15](https://nextjs.org/) - React framework for building the application
 - [React](https://reactjs.org/) - JavaScript library for building user interfaces
 - [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
@@ -64,23 +64,23 @@ To get a local copy up and running, follow these steps:
 \`\`\`
 streamline-saas-landing/
 ├── app/
-│   ├── components/
-│   │   ├── Header.tsx
-│   │   ├── Hero.tsx
-│   │   ├── Features.tsx
-│   │   ├── Testimonials.tsx
-│   │   ├── Pricing.tsx
-│   │   ├── CTA.tsx
-│   │   ├── Footer.tsx
-│   │   ├── ScrollToTop.tsx
-│   │   ├── ImageSlider.tsx
-│   │   ├── ControlledImageSlider.tsx
-│   │   └── SecondHero.tsx
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
+│ ├── components/
+│ │ ├── Header.tsx
+│ │ ├── Hero.tsx
+│ │ ├── Features.tsx
+│ │ ├── Testimonials.tsx
+│ │ ├── Pricing.tsx
+│ │ ├── CTA.tsx
+│ │ ├── Footer.tsx
+│ │ ├── ScrollToTop.tsx
+│ │ ├── ImageSlider.tsx
+│ │ ├── ControlledImageSlider.tsx
+│ │ └── SecondHero.tsx
+│ ├── globals.css
+│ ├── layout.tsx
+│ └── page.tsx
 ├── public/
-│   └── (static assets)
+│ └── (static assets)
 ├── .gitignore
 ├── next.config.js
 ├── package.json
@@ -122,4 +122,3 @@ To deploy your StreamLine landing page, we recommend using [Vercel](https://verc
 ---
 
 Built with ❤️ using Next.js and React. For any questions or support, please [open an issue](https://github.com/yourusername/streamline-saas-landing/issues) on GitHub.
-
