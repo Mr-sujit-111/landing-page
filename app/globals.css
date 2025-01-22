@@ -2,26 +2,123 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 210 50% 98%;
+    --foreground: 220 40% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 40% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 40% 20%;
+
+    --primary: 220 80% 50%;
+    --primary-foreground: 210 50% 98%;
+
+    --secondary: 200 80% 60%;
+    --secondary-foreground: 210 50% 98%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 220 30% 40%;
+
+    --accent: 240 80% 60%;
+    --accent-foreground: 210 50% 98%;
+
+    --destructive: 0 80% 60%;
+    --destructive-foreground: 210 50% 98%;
+
+    --border: 220 20% 90%;
+    --input: 220 20% 90%;
+    --ring: 220 80% 50%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 220 40% 10%;
+    --foreground: 210 50% 98%;
+
+    --card: 220 40% 15%;
+    --card-foreground: 210 50% 98%;
+
+    --popover: 220 40% 15%;
+    --popover-foreground: 210 50% 98%;
+
+    --primary: 220 80% 60%;
+    --primary-foreground: 220 40% 10%;
+
+    --secondary: 200 80% 70%;
+    --secondary-foreground: 220 40% 10%;
+
+    --muted: 220 30% 20%;
+    --muted-foreground: 210 40% 80%;
+
+    --accent: 240 80% 70%;
+    --accent-foreground: 220 40% 10%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 210 50% 98%;
+
+    --border: 220 30% 30%;
+    --input: 220 30% 30%;
+    --ring: 220 80% 60%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+}
+
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  height: 100vh;
+}
+
+.image-slider-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 4px;
+  transition: all 0.3s ease;
+}
+
+.image-slider-dot.active {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+}
+
+.image-slider-dot:first-child,
+.image-slider-dot:last-child {
+  width: 6px;
+  height: 6px;
+  opacity: 0.5;
 }
